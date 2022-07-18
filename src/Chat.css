@@ -76,7 +76,14 @@
     justify-content: space-between;
     align-items: center;
     height: 62px;
+    position: relative;
     border-top: 1px solid lightgray;
+}
+
+.emogiContainer {
+    position: absolute;
+    bottom: -20px;
+    transform: translateY(-34%);
 }
 
 .chat__footer > .MuiSvgIcon-root{
@@ -92,8 +99,13 @@
 .chat__footer>form>input {
     flex: 1;
     border-radius: 30px;
-    padding: 10px;
+    padding: 16px 14px;
     border: none;
+    outline: none;
+}
+
+.emoji__icon {
+    color: #fcbe05 !important;
 }
 
 .chat__footer>form> .iconButton {

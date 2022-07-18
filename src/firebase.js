@@ -5,14 +5,14 @@ import 'firebase/compat/firestore';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAP2T9KzseJqjOc5aP2FfiueCSfS9htvLc",
-    authDomain: "whatsapp-clone-2c5b5.firebaseapp.com",
-    projectId: "whatsapp-clone-2c5b5",
-    storageBucket: "whatsapp-clone-2c5b5.appspot.com",
-    messagingSenderId: "202132322140",
-    appId: "1:202132322140:web:9db33e540ec193e33ef399",
-    measurementId: "G-P4KPD5MDH3"
-  };
+  apiKey: "AIzaSyCAgSyp-UIw9vo4bvRuxXzV4Gm8Eq0n8fg",
+  authDomain: "whatsapp-clone-642d2.firebaseapp.com",
+  projectId: "whatsapp-clone-642d2",
+  storageBucket: "whatsapp-clone-642d2.appspot.com",
+  messagingSenderId: "534195194300",
+  appId: "1:534195194300:web:8ce7401d16d12c1d3343b9",
+  measurementId: "G-8DYS6J9VDY"
+};
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const db = firebaseApp.firestore();

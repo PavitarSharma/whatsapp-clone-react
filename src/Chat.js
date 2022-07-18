@@ -14,12 +14,14 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import db from './firebase';
+import Picker from 'emoji-picker-react'
 
 function Chat() {
 
     const [input, setInput] = useState("");
     const [speed, setSpeed] = useState("");
     const { roomId } = useParams();
+    const [openEmojiBox, setOpenEmojiBox] = useState(false)
     const [roomName, setRoomName] = useState("");
     const [messages, setMessages] = useState([]);
     const [{ user }, dispatch] = useStateValue();
@@ -67,10 +69,10 @@ function Chat() {
                 <div className='chat__headerInfo'>
                     <h3>{roomName}</h3>
                     <p>Last seen {" "}
-                    {new Date(
-                        messages[messages.length -1]?.
-                        timestamp?.toDate()
-                    ).toUTCString()}
+                        {new Date(
+                            messages[messages.length - 1]?.
+                                timestamp?.toDate()
+                        ).toUTCString()}
                     </p>
                 </div>
                 <div className='chat__headerRight'>
@@ -100,8 +102,17 @@ function Chat() {
             </div>
 
             <div className='chat__footer'>
+                <div className="emogiContainer">
+                    {openEmojiBox && (
+                        <Picker
+                            onEmojiClick={(event, emojiObject) =>
+                                setInput(input + emojiObject.emoji)
+                            }
+                        />
+                    )}
+                </div>
 
-                <EmojiEmotionsIcon />
+                <EmojiEmotionsIcon className="emoji__icon" onClick={() => setOpenEmojiBox(!openEmojiBox)} />
                 <form>
                     <input value={input} onChange={e => setInput(e.target.value)} placeholder='Type a message' type='text' />
                     <button onClick={sendMessage} type='submit' className='iconButton'><SendIcon /></button>

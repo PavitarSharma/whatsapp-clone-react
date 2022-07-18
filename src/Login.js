@@ -31,6 +31,7 @@ function Login() {
             </div>
 
             <Button onClick={signIn}>
+                <img className='login__img' src="https://raw.githubusercontent.com/PD-Patel/WhatsApp-Clone/main/public/google-logo.png" alt="" />
                 Sign In With Google
             </Button>
         </div>
