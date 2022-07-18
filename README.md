@@ -1,5 +1,5 @@
 # WhatsApp Clone with REACT + Firebase
-### 🔥 Firebase 🌎 Hosting ---> https://whatsapp-clone-2c5b5.firebaseapp.com/
+### 🔥 Firebase 🌎 Hosting ---> https://whatsapp-clone-642d2.web.app/
 <br>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
